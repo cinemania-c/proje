@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <script type="module" crossorigin src="/proje/assets/vendor-DGDcxXwr.js"></script>
-    <script type="module" crossorigin src="/proje/assets/main-BF7YwEb3.js"></script>
-    <link rel="stylesheet" crossorigin href="/proje/assets/index-DT_zHWA_.css">
+    <script type="module" crossorigin src="/proje/assets/main-DI-WBfpz.js"></script>
+    <link rel="stylesheet" crossorigin href="/proje/assets/index-CnjWhj00.css">
   </head>
   <body>
     <main>
@@ -95,16 +95,6 @@
         </div>
     </div>
     </section>
-      <footer class="footer">
-    <div class="footer-content">
-        <p class="credit footer-content-text">
-            © 2024 | All Rights Reserved Developed with
-            <span class="heart">❤</span> <span class="footer-content-text">by</span>
-            <span class="author-link footer-content-text" id="teamLink">GoIT Students</span>
-        </p>
-    </div>
-
-    </footer>
       <section class="weekly">
   <div class="container">
     <div class="weekly-link-section">
@@ -146,7 +136,78 @@
   </div>
 </section>
 
-      
+      <div class="modal-details modal-font" data-modal>
+  <div class="modal-details__container">
+    <!-- Close button -->
+    <button type="button" class="modal-details__close" data-modal-close>
+      <svg class="modal-details__close-icon" width="24" height="24">
+        <use class="modal-close-btn" href="./img/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <!-- Movie content -->
+    <div class="modal-details__content">
+      <!-- Movie poster -->
+      <div class="modal-details__poster">
+        <img src="" alt="" class="modal-details__image" />
+      </div>
+
+      <!-- Movie info -->
+      <div class="modal-details__info">
+        <h2 class="modal-details__title"></h2>
+
+        <!-- Movie stats -->
+        <div class="modal-details__stats">
+          <div class="modal-details__stat">
+            <span class="modal-details__stat-label">Vote / Votes</span>
+            <div class="modal-details__stat-value">
+              <span class="modal-details__vote"></span>
+              <span class="modal-details__divider">/</span>
+              <span class="modal-details__votes"></span>
+            </div>
+          </div>
+
+          <div class="modal-details__stat">
+            <span class="modal-details__stat-label">Popularity</span>
+            <span
+              class="modal-details__stat-value modal-details__popularity"
+            ></span>
+          </div>
+
+          <div class="modal-details__stat">
+            <span class="modal-details__stat-label">Genre</span>
+            <span class="modal-details__stat-value modal-details__genre"></span>
+          </div>
+        </div>
+
+        <!-- Movie description -->
+        <div class="modal-details__about">
+          <h3 class="modal-details__about-title">ABOUT</h3>
+          <p class="modal-details__about-text"></p>
+        </div>
+
+        <!-- Library button -->
+        <button
+          type="button"
+          class="modal-details__library-btn"
+          data-action="add"
+        >
+          Add to my library
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+    <div class="footer-content">
+        <p class="credit footer-content-text">
+            © 2024 | All Rights Reserved Developed with
+            <span class="heart">❤</span> <span class="footer-content-text">by</span>
+            <span class="author-link footer-content-text" id="teamLink">GoIT Students</span>
+        </p>
+    </div>
+
+    </footer>
     </main>
   </body>
 </html>
