@@ -1,4 +1,18 @@
+import {
+  fetchMovies,
+  BASE_URL,
+  ENDPOINTS,
+  IMG_BASE_URL,
+} from './fetchMovies.js';
 
+import './weekly.js';
+import './loader.js';
+import './scroll-to-top.js';
+
+const heroItemElement = document.querySelector('#heroImg');
+const heroImage = document.querySelector('.hero-image-container');
+const heroItemTitle = document.querySelector('.hero-h1');
+const starContainer = document.querySelector('.hero-rating-stars');
 const heroItemSummary = document.querySelector('.hero-summary');
 const moreDetailsBtn = document.querySelector('.hero-button-moreDetails');
 const heroButtonWatchTrailer = document.querySelector(
@@ -77,6 +91,7 @@ fetchMovies(BASE_URL, ENDPOINTS.POPULAR_MOVIES, { page: 1 }).then(data => {
 // Event listener for "More Details" button
 moreDetailsBtn.addEventListener('click', () => {
   if (heroMovieId) {
+    console.log("yes")
     window.movieModal.show(heroMovieId); // Pass hero movie ID to modal
   }
 });
@@ -88,6 +103,7 @@ window.addEventListener('resize', () => {
     } else if (window.innerWidth <= 1280) {
       setHeroBackground(movie);
     } else {
+      console.log("no")
       setHeroBackground(movie);
     }
   }

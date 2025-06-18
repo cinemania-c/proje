@@ -1,3 +1,6 @@
+import { fetchMovies, BASE_URL, ENDPOINTS, IMG_BASE_URL } from './fetchMovies.js';
+
+
 const weeklyList = document.querySelector('#weekly-movie-card');
 
 const genreMap = {
