@@ -1,10 +1,7 @@
 /* Catalog Section CSS */
-catalog-hero{
-  display: flex;
-  justify-content: center;
 
 
-}
+
 .catalog-film-section {
   padding-top: 16px;
   transition: background-color var(--transition);

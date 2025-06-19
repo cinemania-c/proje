@@ -45,16 +45,18 @@ function renderMovies(movies) {
     const card = document.createElement('div');
     card.className = 'catalog-item';
     card.id = `movie-${movie.id}`;
-    card.style.backgroundImage = `url(${IMG_BASE_URL}${ENDPOINTS.IMG_W500}${movie.poster_path})`;
 
-    const genres = getGenreNames(movie.genre_ids);
-    const year = getReleaseYear(movie.release_date);
-    const info = `${genres}${year ? ` | ${year}` : ''}`;
+    const posterUrl = movie.poster_path
+      ? `${IMG_BASE_URL}${ENDPOINTS.IMG_W500}${movie.poster_path}`
+      : 'https://via.placeholder.com/500x750?text=No+Image';
+
+    console.log('Poster URL:', posterUrl);  // Poster URL'yi konsola yazdır
 
     card.innerHTML = `
+      <img src="${posterUrl}" alt="${movie.title}" class="catalog-img" />
       <div class="catalog-card-info-container">
         <h3 class="catalog-card-title">${movie.title}</h3>
-        <p class="catalog-card-description">${info}</p>
+        <p class="catalog-card-description">${getGenreNames(movie.genre_ids)}${getReleaseYear(movie.release_date) ? ` | ${getReleaseYear(movie.release_date)}` : ''}</p>
         <p class="rating">⭐ ${movie.vote_average.toFixed(1)}</p>
       </div>
     `;
@@ -66,6 +68,7 @@ function renderMovies(movies) {
     movieListContainer.appendChild(card);
   });
 }
+
 
 // 🔹 API'den veri çek
 async function fetchMovies(endpoint, params = {}) {

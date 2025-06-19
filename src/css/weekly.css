@@ -1,4 +1,4 @@
-/* Styles for Desktop devices */
+/*  Desktop  */
 @media only screen and (min-width: 1280px) {
   .weekly-content {
     max-width: 1216px;
@@ -14,7 +14,7 @@
   }
 
   .container .weekly-link-section {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 28px;
     padding-right: 32px;
   }
@@ -35,7 +35,8 @@
     height: 574px;
   }
   .weekly-library .weekly-movie-card {
-    flex-direction: row;
+    flex-direction:row;
+    gap: 10px;
   }
   .weekly-movie-card .catalog-item:not(:first-child) {
     display: list-item;
@@ -57,7 +58,7 @@
   }
 }
 
-/* Styles for Tablet devices */
+/* Tablet */
 @media only screen and (min-width: 768px) {
   .weekly-content {
     max-width: 704px;
@@ -88,13 +89,14 @@
   }
   .weekly-library .weekly-movie-card {
     flex-direction: row;
+    gap: 10px;
   }
   .weekly-movie-card .catalog-item:not(:first-child) {
     display: list-item;
   }
 }
 
-/* Styles for Mobile devices */
+/*Mobile*/
 .weekly-font {
   font-family: var(--main-font);
 }
@@ -152,6 +154,7 @@
 }
 
 .movie-card__image {
+
   width: 100%;
   height: 100%;
   object-fit: cover;

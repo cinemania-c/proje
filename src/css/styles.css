@@ -16,6 +16,6 @@
 @import url('./back-link.css');
 @import url('./footer.css');
 @import url('./root.css');
-@import url('./weekly.css');
 @import url('./catalog.css');
 @import url('./pagination.css');
+@import url(./weekly.css);
