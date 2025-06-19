@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Library</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <load src="./partials/header.html" />
+
+    <main>
+      <load src="./partials/hero.html" />
+
+      <!-- Türler (Genre Dropdown) (Başlangıçta gizli) -->
+      <div id="genre-dropdown-container" style="display: none">
+        <select id="genre-dropdown">
+          <option value="all">All Genres</option>
+          <option value="28">Action</option>
+          <option value="12">Adventure</option>
+          <option value="16">Animation</option>
+          <option value="35">Comedy</option>
+          <option value="80">Crime</option>
+          <option value="99">Documentary</option>
+          <option value="18">Drama</option>
+          <option value="10751">Family</option>
+          <option value="14">Fantasy</option>
+          <option value="36">History</option>
+          <option value="27">Horror</option>
+          <option value="10402">Music</option>
+          <option value="9648">Mystery</option>
+          <option value="10749">Romance</option>
+          <option value="878">Science Fiction</option>
+          <option value="10770">TV Movie</option>
+          <option value="53">Thriller</option>
+          <option value="10752">War</option>
+          <option value="37">Western</option>
+        </select>
+      </div>
+
+      <!-- Library List -->
+      <load src="./partials/library-list.html" />
+
+      <!-- Load More Button (Başlangıçta gizli) -->
+      <div
+        id="load-more-container"
+        style="text-align: center; margin-top: 20px; display: none"
+      >
+        <button id="load-more" class="load-more-button">Load More</button>
+      </div>
+    </main>
+
+    <load src="./partials/footer.html" />
+
+    <!-- Script for loading partials ( Sayfadaki tüm <load> etiketlerini seç) -->
+    <script>
+      document.querySelectorAll('load').forEach(el => {
+        const src = el.getAttribute('src');
+        if (src) {
+          fetch(src)
+            .then(res => res.text())
+            .then(html => {
+              const container = document.createElement('div');
+              container.innerHTML = html;
+              el.replaceWith(container);
+            })
+            .catch(err => console.error('Error loading:', src, err));
+        }
+      });
+    </script>
+
+    <!-- JavaScript Modules -->
+    <script type="module" src="./js/library.js"></script>
+    <script type="module" src="./js/theme.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
