@@ -11,6 +11,8 @@ import './weekly.js';
 import './loader.js';
 import './scroll-to-top.js';
 import './modal.js'; // Bu mutlaka hero.js'den önce HTML'de veya import sırasıyla tanımlı olmalı
+import './trailer-modal.js'
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // DOM Elemanları
