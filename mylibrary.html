@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,14 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/proje/assets/favicon-Clm43KJf.svg" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catalog</title>
-    <link rel="stylesheet" href="./styles.css" /> 
+    <title>My Library</title>
     <script type="module" crossorigin src="/proje/assets/vendor-DGDcxXwr.js"></script>
     <script type="module" crossorigin src="/proje/assets/main-BBY88GL8.js"></script>
-    <link rel="stylesheet" crossorigin href="/proje/assets/catalog-BuAiUZvI.css">
+    <link rel="stylesheet" crossorigin href="/proje/assets/styles-D4Xuikck.css">
   </head>
   <body>
-    <!-- Header -->
     <header class="header">
     <div class="container">
         <nav class="nav">
@@ -78,8 +75,7 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
-<div class="hero-div"> <section class="hero">
+      <section class="hero">
     <div class="container" id="heroImg">
         <div class="hero-image-container">
             <img src="../img/hero-mobile.jpg" alt="Hero image" />
@@ -99,69 +95,57 @@
             </div>
         </div>
     </div>
-    </section></div>
-      <!-- Search Section -->
-      <section class="search-section">
-        <!-- Arama çubuğu form olarak düzenlendi: -->
-        <form id="search-form" class="search-container" autocomplete="off">
-          <input
-            type="text"
-            id="search-input"
-            class="search-input"
-            placeholder="Search movies..."
-          />
-          <!-- Temizleme (X) butonu. Input dolunca gözükür. -->
-          <button
-            type="button"
-            id="clear-button"
-            class="clear-button"
-            style="display: none"
-          >
-            ✕
-          </button>
-          <!-- Yıl seçimi için dropdown menü. -->
-            <select id="year-select" class="year-select">
-            <option value="" >Year</option>
-            <!-- JavaScript ile doldurulacak -->
-          </select>
+    </section>
 
-          <!-- Bu buton 'submit' tipi olduğu için Enter'a basılınca da form submit tetiklenir. -->
-          <button type="submit" id="search-button" class="search-button">
-         <svg class="icon-search" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M17.5 17.5L13.875 13.875" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-</svg>
-          </button>
-        </form>
-      </section>
+      <!-- Türler (Genre Dropdown) (Başlangıçta gizli) -->
+      <div id="genre-dropdown-container" style="display: none">
+        <select id="genre-dropdown">
+          <option value="all">All Genres</option>
+          <option value="28">Action</option>
+          <option value="12">Adventure</option>
+          <option value="16">Animation</option>
+          <option value="35">Comedy</option>
+          <option value="80">Crime</option>
+          <option value="99">Documentary</option>
+          <option value="18">Drama</option>
+          <option value="10751">Family</option>
+          <option value="14">Fantasy</option>
+          <option value="36">History</option>
+          <option value="27">Horror</option>
+          <option value="10402">Music</option>
+          <option value="9648">Mystery</option>
+          <option value="10749">Romance</option>
+          <option value="878">Science Fiction</option>
+          <option value="10770">TV Movie</option>
+          <option value="53">Thriller</option>
+          <option value="10752">War</option>
+          <option value="37">Western</option>
+        </select>
+      </div>
 
-      <!-- Catalog Section -->
-      <section class="catalog-film-section">
-        <div id="movie-list" class="catalog-list"></div>
-        <p
-          class="error-message"
-          style="display: none; color: rgb(114, 107, 107); text-align: center;
-          font-weight: 400;
-font-size: 32px;
-line-height: 1.125;
-text-align: center;
-"
-        >
-          We are unable to load trending movies. Please try again later.
-        </p>
-      </section>
+      <!-- Library List -->
+      <div id="library-container">
+  <div id="default-content" style="display: none; text-align: center">
+    <h2>Oops... You don’t have any movies at your library.</h2>
+    <p>Click the button below to add a movie:</p>
+    <button id="go-to-catalog" onclick="window.location.href='catalog.html'">
+      Go To Catalog Page
+    </button>
+  </div>
 
-      <!-- Pagination Section -->
-      <div class="pagination-container">
-        <div class="pagination">
-          <button id="prevButton" class="pagination-button">Prev</button>
-          <div id="paginationNumbers" class="pagination-numbers"></div>
-          <button id="nextButton" class="pagination-button">Next</button>
-        </div>
+  <div id="library-list"></div>
+</div>
+
+
+      <!-- Load More Button (Başlangıçta gizli) -->
+      <div
+        id="load-more-container"
+        style="text-align: center; margin-top: 20px; display: none"
+      >
+        <button id="load-more" class="load-more-button">Load More</button>
       </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
     <div class="footer-content">
         <p class="credit footer-content-text">
@@ -173,8 +157,8 @@ text-align: center;
 
     </footer>
 
+    <!-- Script for loading partials ( Sayfadaki tüm <load> etiketlerini seç) -->
     <script>
-      // Load external partials (header, footer, etc.)
       document.querySelectorAll('load').forEach(el => {
         const src = el.getAttribute('src');
         if (src) {
@@ -190,5 +174,6 @@ text-align: center;
       });
     </script>
 
+    <!-- JavaScript Modules -->
   </body>
 </html>
