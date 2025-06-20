@@ -1,4 +1,5 @@
 import { initPagination } from './pagination.js';
+import './modal.js'
 
 
 // API AYARLARI
