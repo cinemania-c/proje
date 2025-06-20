@@ -1,0 +1,103 @@
+/* Modal Base Styles */
+.modal-trailer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 20px; */
+}
+
+.modal-trailer.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-trailer__container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    background-color: transparent;
+    border-radius: 16px;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(248, 65, 25, 0.5);
+}
+
+.modal-trailer.active .modal-trailer__container {
+    transform: scale(1);
+}
+
+/* Close Button */
+.modal-trailer__close {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 1;
+    padding: 0;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.modal-trailer__close:hover {
+    color: var(--orange);
+}
+
+/* Video Container */
+.modal-trailer__video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.modal-trailer__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .modal-trailer__container {
+        margin: 0 20px;
+    }
+
+    .modal-trailer__close {
+        top: -40px;
+        right: 0;
+    }
+}
+
+/* Theme-specific styles */
+.light-theme .modal-trailer {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.light-theme .modal-trailer__close {
+    color: #111111;
+    /* Keep close button white in both themes */
+}
+
+.light-theme .modal-trailer__close:hover {
+    color: var(--orange); }
