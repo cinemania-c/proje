@@ -1,6 +1,6 @@
 /* Catalog Section CSS */
 
-
+@import url("./modal-details.css");
 
 .catalog-film-section {
   padding-top: 16px;
