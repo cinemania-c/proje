@@ -14,6 +14,91 @@
     <link rel="stylesheet" crossorigin href="/proje/assets/main-CEq8iEAO.css">
   </head>
   <body>
+    <header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="./index.html" class="logo-link">
+        <svg class="logo-icon" width="48" height="48">
+          <use href="/proje/assets/header-logo-HIFaK8IL.svg#favicon"></use>
+        </svg>
+        <span class="logo-text">Cinemania</span>
+      </a>
+
+      <div class="nav-wrapper">
+        <div style="display: flex; width: 100%; justify-content: space-between">
+          <!-- Desktop navigation -->
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link active" data-page="home"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="./catalog.html" class="nav-link" data-page="catalog"
+                >CATALOG</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="./mylibrary.html" class="nav-link" data-page="library"
+                >MY LIBRARY</a
+              >
+            </li>
+          </ul>
+
+          <div class="header-controls">
+            <div class="theme-toggle">
+              <input type="checkbox" class="theme-switch" id="theme-switch" />
+              <label for="theme-switch" class="switch-label">
+                <span class="switch-slider"></span>
+              </label>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button
+              type="button"
+              class="mobile-menu-btn"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+            >
+              <svg class="mobile-menu-icon" width="24" height="24">
+                <use href="/proje/assets/close-CmNuQc8N.svg#icon-menu"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu overlay -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-container">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a href="./index.html" class="mobile-nav-link" data-page="home"
+                >HOME</a
+              >
+            </li>
+            <li class="mobile-nav-item">
+              <a
+                href="./catalog.html"
+                class="mobile-nav-link"
+                data-page="catalog"
+                >CATALOG</a
+              >
+            </li>
+            <li class="mobile-nav-item">
+              <a
+                href="./mylibrary.html"
+                class="mobile-nav-link"
+                data-page="library"
+                >MY LIBRARY</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
     <main>
       <!-- Loads the specified .html file -->
       <div class="modal-trailer">
@@ -98,68 +183,7 @@
       </div>
     </div>
   </div>
-      <header class="header">
-    <div class="container">
-        <nav class="nav">
-            <a href="./index.html" class="logo-link">
-                <svg class="logo-icon" width="48" height="48">
-                    <use href="/proje/assets/header-logo-HIFaK8IL.svg#favicon"></use>
-                </svg>
-                <span class="logo-text">Cinemania</span>
-            </a>
-
-            <div class="nav-wrapper">
-                <div style="display: flex; width: 100%; justify-content: space-between">
-                    <!-- Desktop navigation -->
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="./index.html" class="nav-link active" data-page="home">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./catalog.html" class="nav-link" data-page="catalog">CATALOG</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./mylibrary.html" class="nav-link" data-page="library">MY LIBRARY</a>
-                        </li>
-                    </ul>
-
-                    <div class="header-controls">
-                        <div class="theme-toggle">
-                            <input type="checkbox" class="theme-switch" id="theme-switch" />
-                            <label for="theme-switch" class="switch-label">
-                                <span class="switch-slider"></span>
-                            </label>
-                        </div>
-
-                        <!-- Mobile menu button -->
-                        <button type="button" class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
-                            <svg class="mobile-menu-icon" width="24" height="24">
-                                <use href="/proje/assets/close-CmNuQc8N.svg#icon-menu"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mobile menu overlay -->
-            <div class="mobile-menu">
-                <div class="mobile-menu-container">
-                    <ul class="mobile-nav-list">
-                        <li class="mobile-nav-item">
-                            <a href="./index.html" class="mobile-nav-link" data-page="home">HOME</a>
-                        </li>
-                        <li class="mobile-nav-item">
-                            <a href="./catalog.html" class="mobile-nav-link" data-page="catalog">CATALOG</a>
-                        </li>
-                        <li class="mobile-nav-item">
-                            <a href="./mylibrary.html" class="mobile-nav-link" data-page="library">MY LIBRARY</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    </header>
+      
       <section class="hero">
     <div class="container" id="heroImg">
         <div class="hero-image-container">
