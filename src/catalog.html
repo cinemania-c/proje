@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +9,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/catalog.css" />
     <link rel="stylesheet" href="./css/pagination.css" />
-    <link rel="stylesheet" href="./css/hero.css" /> 
+    <link rel="stylesheet" href="./css/hero.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
   </head>
@@ -19,7 +18,7 @@
     <load src="./partials/header.html" />
     <main>
       <!-- Hero Section -->
-<div class="hero-div"> <load  src="./partials/hero.html" /></div>
+      <div class="hero-div"><load src="./partials/hero.html" /></div>
       <!-- Search Section -->
       <section class="search-section">
         <!-- Arama çubuğu form olarak düzenlendi: -->
@@ -40,17 +39,36 @@
             ✕
           </button>
           <!-- Yıl seçimi için dropdown menü. -->
-            <select id="year-select" class="year-select">
-            <option value="" >Year</option>
+          <select id="year-select" class="year-select">
+            <option value="">Year</option>
             <!-- JavaScript ile doldurulacak -->
           </select>
 
           <!-- Bu buton 'submit' tipi olduğu için Enter'a basılınca da form submit tetiklenir. -->
           <button type="submit" id="search-button" class="search-button">
-         <svg class="icon-search" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M17.5 17.5L13.875 13.875" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-</svg>
+            <svg
+              class="icon-search"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                stroke="#111111"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17.5 17.5L13.875 13.875"
+                stroke="#111111"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </button>
         </form>
       </section>
@@ -60,12 +78,15 @@
         <div id="movie-list" class="catalog-list"></div>
         <p
           class="error-message"
-          style="display: none; color: rgb(114, 107, 107); text-align: center;
-          font-weight: 400;
-font-size: 32px;
-line-height: 1.125;
-text-align: center;
-"
+          style="
+            display: none;
+            color: rgb(114, 107, 107);
+            text-align: center;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 1.125;
+            text-align: center;
+          "
         >
           We are unable to load trending movies. Please try again later.
         </p>
@@ -80,14 +101,14 @@ text-align: center;
         </div>
       </div>
       <section>
-       <load src="./partials/modal-trailer.html"/> 
-      <load src="./partials/modal-details.html" />
+        <load src="./partials/modal-trailer.html" />
+        <load src="./partials/modal-details.html" />
       </section>
-   
     </main>
 
     <!-- Footer -->
     <load src="./partials/footer.html" />
+    <load src="./partials/scroll-to-top.html" />
 
     <script>
       // Load external partials (header, footer, etc.)
