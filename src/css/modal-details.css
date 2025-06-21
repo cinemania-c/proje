@@ -50,11 +50,6 @@
     color: #ffffff;
     transition: color 0.3s ease;
 }
-
-.modal-details__close:hover {
-    color: #f87719;
-    /* Bu renk SVG ikonun fill rengi olur */
-}
 /* Theme-specific styles */
 .modal-details__container {
     background-color: #171717;
@@ -246,4 +241,8 @@
 
     .modal-details__library-btn {
         font-size: 16px;
-    } }
+    } 
+        .modal-details__close:hover {
+            color: #f87719;
+            /* Bu renk SVG ikonun fill rengi olur */   }
+}
