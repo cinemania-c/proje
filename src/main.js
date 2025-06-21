@@ -6,9 +6,10 @@ import './js/footer';
 import './js/scroll-to-top'
 import './js/modal'
 import './js/pagination';
-import './js/catalog';
+
+
 
 import './js/weekly';
 import './js/library';
-
-
+import './js/upcoming';
+import './js/catalog';
