@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,10 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/proje/assets/favicon-Clm43KJf.svg" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catalog</title> 
+    <title>Catalog</title>
     <script type="module" crossorigin src="/proje/assets/vendor-DGDcxXwr.js"></script>
-    <script type="module" crossorigin src="/proje/assets/main-aH-V50Bm.js"></script>
-    <link rel="stylesheet" crossorigin href="/proje/assets/main-BdNBREx5.css">
+    <script type="module" crossorigin src="/proje/assets/main-CdMm2xko.js"></script>
+    <link rel="stylesheet" crossorigin href="/proje/assets/main-DdQq4_at.css">
     <link rel="stylesheet" crossorigin href="/proje/assets/catalog-D3LCODtv.css">
   </head>
   <body>
@@ -50,7 +49,7 @@
                         <!-- Mobile menu button -->
                         <button type="button" class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
                             <svg class="mobile-menu-icon" width="24" height="24">
-                                <use href="./img/icons.svg#icon-menu"></use>
+                                <use href="/proje/assets/close-CmNuQc8N.svg#icon-menu"></use>
                             </svg>
                         </button>
                     </div>
@@ -78,7 +77,7 @@
     </header>
     <main>
       <!-- Hero Section -->
-<div class="hero-div"> <section class="hero">
+      <div class="hero-div"><section class="hero">
     <div class="container" id="heroImg">
         <div class="hero-image-container">
             <img src="../img/hero-mobile.jpg" alt="Hero image" />
@@ -120,17 +119,36 @@
             ✕
           </button>
           <!-- Yıl seçimi için dropdown menü. -->
-            <select id="year-select" class="year-select">
-            <option value="" >Year</option>
+          <select id="year-select" class="year-select">
+            <option value="">Year</option>
             <!-- JavaScript ile doldurulacak -->
           </select>
 
           <!-- Bu buton 'submit' tipi olduğu için Enter'a basılınca da form submit tetiklenir. -->
           <button type="submit" id="search-button" class="search-button">
-         <svg class="icon-search" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M17.5 17.5L13.875 13.875" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-</svg>
+            <svg
+              class="icon-search"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                stroke="#111111"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17.5 17.5L13.875 13.875"
+                stroke="#111111"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </button>
         </form>
       </section>
@@ -140,12 +158,15 @@
         <div id="movie-list" class="catalog-list"></div>
         <p
           class="error-message"
-          style="display: none; color: rgb(114, 107, 107); text-align: center;
-          font-weight: 400;
-font-size: 32px;
-line-height: 1.125;
-text-align: center;
-"
+          style="
+            display: none;
+            color: rgb(114, 107, 107);
+            text-align: center;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 1.125;
+            text-align: center;
+          "
         >
           We are unable to load trending movies. Please try again later.
         </p>
@@ -160,7 +181,7 @@ text-align: center;
         </div>
       </div>
       <section>
-       <div class="modal-trailer">
+        <div class="modal-trailer">
     <div class="modal-trailer__container">
         <!-- Close button -->
         <button type="button" class="modal-trailer__close">×</button>
@@ -179,8 +200,8 @@ text-align: center;
             </iframe>
         </div>
     </div>
-</div> 
-      <div class="modal-details modal-font" data-modal>
+</div>
+        <div class="modal-details modal-font" data-modal>
     <div class="modal-details__container">
       <!-- Close button -->
       <button type="button" class="modal-details__close" data-modal-close>
@@ -243,7 +264,6 @@ text-align: center;
     </div>
   </div>
       </section>
-   
     </main>
 
     <!-- Footer -->
@@ -257,6 +277,12 @@ text-align: center;
     </div>
 
     </footer>
+    <button type="button" class="scroll-to-top" aria-label="Scroll to top">
+  <svg class="scroll-to-top__icon" width="20" height="20" viewBox="0 0 24 24">
+    <path d="M12 4l-8 8h16l-8-8z" fill="currentColor" />
+  </svg>
+</button>
+
 
     <script>
       // Load external partials (header, footer, etc.)
