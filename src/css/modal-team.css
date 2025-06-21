@@ -1,0 +1,49 @@
+/* Styles for always visible */
+.dark-theme .modal.active .modal-content {
+    background-color: black ;
+}
+
+.modal.active .modal-content {
+    background-color: white;
+}
+
+.dark-theme .modal-header h2 {
+    color: #000000;
+}
+
+.modal-header h2 {
+    color: #ffffff;
+}
+
+.github-social-link, .linkedin-social-link {
+    color: #6c757d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.github-social-link:hover, .linkedin-social-link:hover {
+    color: #f87719;
+    transform: translateY(-3px);
+}
+
+.github-social-icon, .linkedin-social-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1280px) {
+    
+}
+
+
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Styles for Mobile devices */
