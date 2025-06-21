@@ -46,7 +46,15 @@
 .dark-theme .modal-close-btn {
     fill: #ffffff;
 }
+.modal-details__close {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
 
+.modal-details__close:hover {
+    color: #f87719;
+    /* Bu renk SVG ikonun fill rengi olur */
+}
 /* Theme-specific styles */
 .modal-details__container {
     background-color: #171717;
