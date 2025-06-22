@@ -25,49 +25,69 @@
     justify-content: center;
 }
 
+/* Modal içeriğinde genel yazı tipi tanımı */
 .modal-font {
     font-family: var(--font-family);
 }
 
+/* Modal aktif hale geldiğinde görünür olur */
 .modal-details.active {
     opacity: 1;
     visibility: visible;
 }
-
+/*  Modal içeriği kutusunun genel boyutu, stili ve animasyonu */
 .modal-details__container {
     position: relative;
     max-width: 806px;
+    /* Genişlik sınırı */
     width: 100%;
     padding: 40px 20px;
+    /* İç boşluklar */
     border-radius: 16px;
+    /* Köşeleri yumuşat */
     overflow-y: auto;
+    /* Yükseklik taşarsa scroll */
     max-height: 90vh;
+    /* Ekran yüksekliğinin %90’ını geçmez */
     background-color: var(--background);
+    /* Tema değişkeni */
     box-shadow: 0 0 20px rgba(248, 65, 25, 0.5);
+    /* Turuncu ışıltılı gölge efekti */
     transform: scale(0.9);
+    /* Açılışta küçültülmüş görünüm */
     transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Geçiş efektleri */
 }
 
+/* Kapatma ikonunun varsayılan (açık tema) rengi */
 .modal-close-btn {
     fill: #000000;
 }
 
+/* Karanlık temada kapatma ikonunun rengi beyaz olur */
 .dark-theme .modal-close-btn {
     fill: #ffffff;
 }
+
+/* Kapatma butonu metin renginin geçişi */
 .modal-details__close {
     color: #ffffff;
     transition: color 0.3s ease;
 }
-/* Theme-specific styles */
+
+/* Tema bazlı arka plan ve metin rengi ayarları */
 .modal-details__container {
     background-color: #171717;
+    /* Koyu tema arka planı */
     color: #ffffff;
+    /* Koyu tema metin rengi */
 }
 
 .light-theme .modal-details__container {
     background-color: #ffffff;
+    /* Açık tema arka planı */
     color: #111111;
+    /* Açık tema metin rengi */
 }
 
 /* Close Button */
