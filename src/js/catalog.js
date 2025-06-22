@@ -1,6 +1,5 @@
 import { initPagination } from './pagination.js';
-import './modal.js'
-
+import './modal.js';
 
 // API AYARLARI
 const API_KEY = '9d898ad8ed36e30a2f478f382f12d8e2';
@@ -23,13 +22,28 @@ const errorMessage = document.querySelector('.error-message');
 
 // TÜRLER HARİTASI
 const genreMap = {
-  28: 'Action', 12: 'Adventure', 16: 'Animation', 35: 'Comedy', 80: 'Crime',
-  99: 'Documentary', 18: 'Drama', 10751: 'Family', 14: 'Fantasy', 36: 'History',
-  27: 'Horror', 10402: 'Music', 9648: 'Mystery', 10749: 'Romance',
-  878: 'Science Fiction', 10770: 'TV Movie', 53: 'Thriller', 10752: 'War', 37: 'Western'
+  28: 'Action',
+  12: 'Adventure',
+  16: 'Animation',
+  35: 'Comedy',
+  80: 'Crime',
+  99: 'Documentary',
+  18: 'Drama',
+  10751: 'Family',
+  14: 'Fantasy',
+  36: 'History',
+  27: 'Horror',
+  10402: 'Music',
+  9648: 'Mystery',
+  10749: 'Romance',
+  878: 'Science Fiction',
+  10770: 'TV Movie',
+  53: 'Thriller',
+  10752: 'War',
+  37: 'Western',
 };
 
-// 🔹 Yardımcı fonksiyonlar
+// Yardımcı fonksiyonlar
 function getGenreNames(genreIds) {
   if (!Array.isArray(genreIds)) return '';
   const names = genreIds.map(id => genreMap[id] || 'Unknown');
@@ -39,7 +53,7 @@ function getReleaseYear(date) {
   return date ? date.split('-')[0] : '';
 }
 
-// 🔹 Film kartlarını render et
+// Film kartlarını render et
 function renderMovies(movies) {
   movieListContainer.innerHTML = '';
   movies.forEach(movie => {
@@ -51,13 +65,17 @@ function renderMovies(movies) {
       ? `${IMG_BASE_URL}${ENDPOINTS.IMG_W500}${movie.poster_path}`
       : 'https://via.placeholder.com/500x750?text=No+Image';
 
-    console.log('Poster URL:', posterUrl);  // Poster URL'yi konsola yazdır
+    console.log('Poster URL:', posterUrl); // Poster URL'yi konsola yazdır
 
     card.innerHTML = `
       <img src="${posterUrl}" alt="${movie.title}" class="catalog-img" />
       <div class="catalog-card-info-container">
         <h3 class="catalog-card-title">${movie.title}</h3>
-        <p class="catalog-card-description">${getGenreNames(movie.genre_ids)}${getReleaseYear(movie.release_date) ? ` | ${getReleaseYear(movie.release_date)}` : ''}</p>
+        <p class="catalog-card-description">${getGenreNames(movie.genre_ids)}${
+      getReleaseYear(movie.release_date)
+        ? ` | ${getReleaseYear(movie.release_date)}`
+        : ''
+    }</p>
         <p class="rating">⭐ ${movie.vote_average.toFixed(1)}</p>
       </div>
     `;
@@ -70,8 +88,7 @@ function renderMovies(movies) {
   });
 }
 
-
-// 🔹 API'den veri çek
+// API'den veri çek
 async function fetchMovies(endpoint, params = {}) {
   const url = new URL(BASE_URL + endpoint);
   url.searchParams.append('api_key', API_KEY);
@@ -87,7 +104,7 @@ async function fetchMovies(endpoint, params = {}) {
   return response.json();
 }
 
-// 🔹 Trend filmleri yükle (ilk açılış)
+// Trend filmleri yükle (ilk açılış)
 async function loadTrendingMovies() {
   try {
     const data = await fetchMovies(ENDPOINTS.TRENDING_WEEK);
@@ -105,7 +122,7 @@ async function loadTrendingMovies() {
   }
 }
 
-// 🔹 Yıl dropdown'ını doldur
+//  Yıl dropdown'ını doldur
 function populateYearDropdown() {
   const currentYear = new Date().getFullYear();
   for (let y = currentYear; y >= 1960; y--) {
@@ -116,16 +133,18 @@ function populateYearDropdown() {
   }
 }
 
-// 🔹 Arama input ✕ butonu kontrol
+// Arama input ✕ butonu kontrol
 searchInput.addEventListener('input', () => {
-  clearButton.style.display = searchInput.value.trim() ? 'inline-block' : 'none';
+  clearButton.style.display = searchInput.value.trim()
+    ? 'inline-block'
+    : 'none';
 });
 clearButton.addEventListener('click', () => {
   searchInput.value = '';
   clearButton.style.display = 'none';
 });
 
-// 🔹 Arama form submit
+// Arama form submit
 searchForm.addEventListener('submit', async e => {
   e.preventDefault();
   const query = searchInput.value.trim();
@@ -145,7 +164,7 @@ searchForm.addEventListener('submit', async e => {
     } else {
       movieListContainer.innerHTML = '';
       errorMessage.textContent = `  OOPS!        We are unable to load trending movies. Please try again later.
-`
+`;
       errorMessage.style.display = 'block';
     }
   } catch (err) {
@@ -155,7 +174,7 @@ searchForm.addEventListener('submit', async e => {
   }
 });
 
-// 🔹 Sayfa açıldığında
+// Sayfa açıldığında
 document.addEventListener('DOMContentLoaded', () => {
   initPagination();
   populateYearDropdown();
