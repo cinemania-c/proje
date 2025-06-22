@@ -217,7 +217,7 @@
   fill: currentColor;
 }
 
-/* Animations */
+/* Animasyonlar  */
 @keyframes heartbeat {
   0% {
     transform: scale(1);
