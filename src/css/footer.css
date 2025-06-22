@@ -8,11 +8,11 @@
 
   .footer-content {
     display: flex;
+    gap: 10px;
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 50px;
-    gap: 10px;
   }
 }
 
