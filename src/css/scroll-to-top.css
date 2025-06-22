@@ -8,8 +8,6 @@
   border-radius: 50%;
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
   border: none;
-  cursor: pointer;
-  display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -17,6 +15,8 @@
   transform: translateY(20px);
   transition: all 0.3s ease-in-out;
   z-index: 999;
+  cursor: pointer;
+  display: flex;
 }
 
 .scroll-to-top.visible {
@@ -39,7 +39,8 @@
   transform: translateY(-2px);
 }
 
-/* Responsive adjustments */
+/* Mobile-Tablet-Destop */
+
 @media screen and (max-width: 768px) {
   .scroll-to-top {
     bottom: 20px;

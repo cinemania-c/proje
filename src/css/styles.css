@@ -2,8 +2,10 @@
   |============================
   | include css partials with
   | default @import url()
+  (Genel üsteki gibi kullanılmalı sıralama önemli)
   |============================
 */
+
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');

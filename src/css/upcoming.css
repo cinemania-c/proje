@@ -1,3 +1,5 @@
+/*Libary Button hover ve renk ayarı düzenlendi */
+
 /* Library Button */
 .upcoming__library-btn {
   width: 100%;
@@ -14,8 +16,8 @@
 }
 
 .upcoming__library-btn:hover {
-  background: #fff;
   color: #f87719;
+  background: #fff;
 }
 
 .light-theme .upcoming__library-btn {
