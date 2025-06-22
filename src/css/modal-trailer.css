@@ -1,45 +1,66 @@
-/* Modal Base Styles */
+/* Trailer Modal: Tüm ekranı kaplayan yarı saydam arka plan ve hizalama */
 .modal-trailer {
     position: fixed;
+    /* Sayfaya sabitlenir */
     top: 0;
     left: 0;
     width: 100%;
+    /* Tüm genişliği kaplar */
     height: 100%;
+    /* Tüm yüksekliği kaplar */
     background-color: rgba(0, 0, 0, 0.8);
+    /* Koyu yarı saydam arka plan */
     opacity: 0;
+    /* Başlangıçta görünmez */
     visibility: hidden;
+    /* Başlangıçta erişilemez */
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Açılış/kapanış animasyonu */
     z-index: 9999;
+    /* En üst katmanda yer alır */
     display: flex;
+    /* İçeriği ortalamak için flex kullanılır */
     align-items: center;
+    /* Dikey ortalama */
     justify-content: center;
-    /* padding: 20px; */
+    /* Yatay ortalama */
+    /* padding: 20px; Geçici olarak devre dışı bırakılmış */
 }
 
+/* Modal aktif olduğunda görünür hale gelir */
 .modal-trailer.active {
     opacity: 1;
     visibility: visible;
 }
 
+/* Modal kutusunun boyutu, görünümü ve animasyonu */
 .modal-trailer__container {
     position: relative;
     width: 100%;
     max-width: 900px;
+    /* Maksimum genişlik sınırı */
     background-color: transparent;
+    /* Saydam içerik alanı */
     border-radius: 16px;
+    /* Köşeler yumuşatılır */
     transform: scale(0.9);
+    /* Başlangıçta hafif küçültülmüş görünüm */
     transition: transform 0.3s ease;
+    /* Büyüme animasyonu */
     box-shadow: 0 0 20px rgba(248, 65, 25, 0.5);
+    /* Turuncu parlak gölge efekti */
 }
 
+/* Modal aktifken kutu büyür (animasyon) */
 .modal-trailer.active .modal-trailer__container {
     transform: scale(1);
 }
 
-/* Close Button */
+/* Kapatma butonunun konumlandırması ve stilleri */
 .modal-trailer__close {
     position: absolute;
     top: -40px;
+    /* Kutunun dışına taşar */
     right: -40px;
     width: 30px;
     height: 30px;
@@ -47,27 +68,33 @@
     border: none;
     cursor: pointer;
     color: #ffffff;
+    /* Varsayılan beyaz renk */
     font-size: 30px;
     line-height: 1;
     padding: 0;
     z-index: 2;
+    /* Video üzerine çıkabilmesi için */
     transition: color 0.3s ease;
 }
 
+/* === Kapatma butonuna hover efekti (turuncuya dönüş) === */
 .modal-trailer__close:hover {
     color: var(--orange);
+    /* Tema rengini kullan */
 }
 
-/* Video Container */
+/* Video oranını koruyan kapsayıcı kutu (16:9 oran)  */
 .modal-trailer__video-container {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
-    /* 16:9 Aspect Ratio */
+    /* 16:9 oranı için (9/16 = 0.5625) */
     border-radius: 16px;
     overflow: hidden;
+    /* Video taşmasını engeller */
 }
 
+/*  Video iframe yerleşimi (kutuyu tamamen kaplar)*/
 .modal-trailer__video {
     position: absolute;
     top: 0;
@@ -75,29 +102,36 @@
     width: 100%;
     height: 100%;
     border: none;
+    /* Kenarlık kaldırılır */
 }
 
-/* Responsive Styles */
+/* Mobil görünüm için özel düzenlemeler (≤768px) */
 @media screen and (max-width: 768px) {
     .modal-trailer__container {
         margin: 0 20px;
+        /* Ekranın kenarından içeri boşluk bırakır */
     }
 
     .modal-trailer__close {
         top: -40px;
         right: 0;
+        /* Sağ kenara yaslanır */
     }
 }
 
-/* Theme-specific styles */
+/* Açık tema için özel ayarlamalar*/
 .light-theme .modal-trailer {
     background-color: rgba(255, 255, 255, 0.8);
+    /* Beyaz yarı saydam arka plan */
 }
 
+/* Açık tema: kapatma butonu rengi siyah yapılır */
 .light-theme .modal-trailer__close {
     color: #111111;
-    /* Keep close button white in both themes */
+    /* Her iki temada da kapatma butonu kontrastlı kalır */
 }
 
+/* Açık tema: hover durumunda turuncuya dönüş */
 .light-theme .modal-trailer__close:hover {
-    color: var(--orange); }
+    color: var(--orange);
+}
