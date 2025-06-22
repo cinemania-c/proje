@@ -1,19 +1,28 @@
-/* Modal Base Styles */
+/* Modal bileşeninin tam ekran karartılmış arka planı ve konumlandırması*/
 .modal-details {
     position: fixed;
+    /* Ekrana sabitlenir */
     top: 0;
     left: 0;
     width: 100%;
+    /* Tüm yatay alanı kaplar */
     height: 100%;
+    /* Tüm dikey alanı kaplar */
     background-color: rgba(0, 0, 0, 0.8);
+    /* Yarı saydam siyah arka plan */
     opacity: 0;
+    /* Başlangıçta gizli */
     visibility: hidden;
+    /* Başlangıçta görünmez */
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Açılıp kapanma animasyonu */
     z-index: 1000;
+    /* En üstte görünür */
     display: flex;
+    /* İçeriği ortalamak için */
     align-items: center;
+    /* Dikey ortalama */
     justify-content: center;
-    /* padding: 20px; */
 }
 
 .modal-font {
