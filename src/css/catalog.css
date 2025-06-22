@@ -66,6 +66,12 @@
 }
 
 /* Rating */
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #ffd700; /* Altın sarısı yıldız. İstersen var(--accent-color) yapabilirsin. */
+}
 
 .rating span {
   margin-left: 4px;
