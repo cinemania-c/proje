@@ -1,5 +1,7 @@
-const weeklyList = document.querySelector('#weekly-movie-card');
+// weekly.js
 
+const weeklyList = document.querySelector('#weekly-movie-card');
+// API AYARLARI
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMG_BASE_URL = 'https://image.tmdb.org/t/p';
 const API_KEY = '9d898ad8ed36e30a2f478f382f12d8e2';
@@ -49,19 +51,18 @@ async function fetchMovies(baseUrl, endpoint) {
 async function loadWeeklyMovies() {
   try {
     const data = await fetchMovies(BASE_URL, ENDPOINTS.TRENDING_WEEK);
-   
 
     const movies = data.results.slice(0, 3);
 
     const catalogItems = movies.map(movie => {
       const genresString = getGenreNames(movie.genre_ids);
       const releaseYear = getReleaseYear(movie.release_date);
-      const infoText = `${genresString}${releaseYear ? ` | ${releaseYear}` : ''}`;
-     const posterUrl = movie.poster_path
-  ? `${IMG_BASE_URL}/w500${movie.poster_path}`
-  : 'https://via.placeholder.com/500x750?text=No+Image';
-
-     
+      const infoText = `${genresString}${
+        releaseYear ? ` | ${releaseYear}` : ''
+      }`;
+      const posterUrl = movie.poster_path
+        ? `${IMG_BASE_URL}/w500${movie.poster_path}`
+        : 'https://via.placeholder.com/500x750?text=No+Image';
 
       return `
         <li class="catalog-item" id="weekly-movie-${movie.id}">
@@ -69,7 +70,9 @@ async function loadWeeklyMovies() {
           <div class="catalog-card-info-container weekly-font">
             <h2 class="weekly-card-title">${movie.title}</h2>
             <p class="weekly-card-text">${infoText}</p>
-            <p class="weekly-card-rating">⭐ ${movie.vote_average.toFixed(1)}</p>
+            <p class="weekly-card-rating">⭐ ${movie.vote_average.toFixed(
+              1
+            )}</p>
           </div>
         </li>
       `;
@@ -87,5 +90,5 @@ async function loadWeeklyMovies() {
     console.error('Hata:', error);
   }
 }
-
+// Sayfa yüklendiğinde haftalık filmleri yükle
 loadWeeklyMovies();
