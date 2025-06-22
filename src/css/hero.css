@@ -8,6 +8,8 @@
   justify-content: center;
 }
 .hero > .container {
+  width: 100%;
+  min-width: 320px;
   position: relative;
   display: flex;
   padding: 0;

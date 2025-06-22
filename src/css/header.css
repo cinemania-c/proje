@@ -350,6 +350,10 @@
 }
 
 /* Theme Switcher Styles */
+.switcher__ball {
+  width: 18px;
+  height: 18px;
+}
 .switch-icon-sun {
   margin-left: 10px;
   margin-bottom: 1px;
