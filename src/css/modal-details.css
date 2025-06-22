@@ -1,67 +1,95 @@
-/* Modal Base Styles */
+/* Modal bileşeninin tam ekran karartılmış arka planı ve konumlandırması*/
 .modal-details {
     position: fixed;
+    /* Ekrana sabitlenir */
     top: 0;
     left: 0;
     width: 100%;
+    /* Tüm yatay alanı kaplar */
     height: 100%;
+    /* Tüm dikey alanı kaplar */
     background-color: rgba(0, 0, 0, 0.8);
+    /* Yarı saydam siyah arka plan */
     opacity: 0;
+    /* Başlangıçta gizli */
     visibility: hidden;
+    /* Başlangıçta görünmez */
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Açılıp kapanma animasyonu */
     z-index: 1000;
+    /* En üstte görünür */
     display: flex;
+    /* İçeriği ortalamak için */
     align-items: center;
+    /* Dikey ortalama */
     justify-content: center;
-    /* padding: 20px; */
 }
 
+/* Modal içeriğinde genel yazı tipi tanımı */
 .modal-font {
     font-family: var(--font-family);
 }
 
+/* Modal aktif hale geldiğinde görünür olur */
 .modal-details.active {
     opacity: 1;
     visibility: visible;
 }
-
+/*  Modal içeriği kutusunun genel boyutu, stili ve animasyonu */
 .modal-details__container {
     position: relative;
     max-width: 806px;
+    /* Genişlik sınırı */
     width: 100%;
     padding: 40px 20px;
+    /* İç boşluklar */
     border-radius: 16px;
+    /* Köşeleri yumuşat */
     overflow-y: auto;
+    /* Yükseklik taşarsa scroll */
     max-height: 90vh;
+    /* Ekran yüksekliğinin %90’ını geçmez */
     background-color: var(--background);
+    /* Tema değişkeni */
     box-shadow: 0 0 20px rgba(248, 65, 25, 0.5);
+    /* Turuncu ışıltılı gölge efekti */
     transform: scale(0.9);
+    /* Açılışta küçültülmüş görünüm */
     transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Geçiş efektleri */
 }
 
+/* Kapatma ikonunun varsayılan (açık tema) rengi */
 .modal-close-btn {
     fill: #000000;
 }
 
+/* Karanlık temada kapatma ikonunun rengi beyaz olur */
 .dark-theme .modal-close-btn {
     fill: #ffffff;
 }
+
+/* Kapatma butonu metin renginin geçişi */
 .modal-details__close {
     color: #ffffff;
     transition: color 0.3s ease;
 }
-/* Theme-specific styles */
+
+/* Tema bazlı arka plan ve metin rengi ayarları */
 .modal-details__container {
-    background-color: #171717;
-    color: #ffffff;
+    background-color: #171717;/* Koyu tema arka planı */ 
+    color: #ffffff;/* Koyu tema metin rengi */
+    
 }
 
 .light-theme .modal-details__container {
-    background-color: #ffffff;
-    color: #111111;
+    background-color: #ffffff;/* Açık tema arka planı */
+     color: #111111; /* Açık tema metin rengi */
+   
+   
 }
 
-/* Close Button */
+/* Kapatma butonunun konumu ve stil ayarları  */
 .modal-details__close {
     position: absolute;
     top: 16px;
@@ -79,32 +107,37 @@
     color: #111111;
 }
 
-/* Content Layout */
+/* Modal içeriği düzeni (mobil görünüm) */
 .modal-details__content {
     display: flex;
     flex-direction: column;
+    /* Dikey yerleşim */
     gap: 20px;
 }
 
+/* Poster kutusu ayarları */
 .modal-details__poster {
     width: 100%;
     border-radius: 5px;
     overflow: hidden;
 }
 
+/* Poster görseli ayarları */
 .modal-details__image {
     width: 100%;
     height: auto;
     object-fit: cover;
+    /* Görsel taşarsa orantılı kırp */
 }
 
-/* Movie Info Styles */
+/* === Film başlığı ve bilgi bloğu === */
 .modal-details__title {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 20px;
 }
 
+/* Puan istatistikleri genel kutusu */
 .modal-details__stats {
     display: flex;
     flex-direction: column;
@@ -112,29 +145,35 @@
     margin-bottom: 20px;
 }
 
+/* Her bir istatistik satırı */
 .modal-details__stat {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* İstatistik etiketi */
 .modal-details__stat-label {
     color: #b7b7b7;
     font-size: 14px;
 }
 
+/* Puan kutusu */
 .modal-details__vote {
     padding: 1px 8px;
     background-color: #f87719;
+    /* Turuncu arka plan */
     border-radius: 5px;
     color: #ffffff;
 }
 
+/* Oy ile oy sayısı arasındaki ayraç */
 .modal-details__divider {
     margin: 0 4px;
     color: #b7b7b7;
 }
 
+/* Oy sayısı kutusu */
 .modal-details__votes {
     padding: 1px 8px;
     background-color: #282828;
@@ -146,7 +185,7 @@
     color: #111111;
 }
 
-/* About Section */
+/* Film hakkında bilgi alanı  */
 .modal-details__about-title {
     font-size: 16px;
     font-weight: 500;
@@ -160,7 +199,7 @@
     margin-bottom: 24px;
 }
 
-/* Library Button */
+/*Kütüphane butonu stilleri */
 .modal-details__library-btn {
     width: 100%;
     margin-top: 20px;
@@ -175,23 +214,27 @@
     transition: all 0.3s ease;
 }
 
+/* Kütüphane butonu üzerine gelindiğinde arka plan rengi değişir */
 .modal-details__library-btn:hover {
     background: #f87719;
 }
 
+/* Açık temada metin rengi siyah yapılır */
 .light-theme .modal-details__library-btn {
     color: #111111;
 }
 
+/* Buton, kaldırma (remove) eylemindeyse dolu görünür */
 .modal-details__library-btn[data-action='remove'] {
     background: #f87719;
 }
 
+/* Üzerine gelindiğinde tekrar saydam hale gelir */
 .modal-details__library-btn[data-action='remove']:hover {
     background: transparent;
 }
 
-/* Tablet Styles */
+/*Tablet boyutuna göre düzenlemeler (>=768px)*/
 @media only screen and (min-width: 768px) {
     .modal-details__container {
         padding: 44px;
@@ -199,20 +242,24 @@
 
     .modal-details__content {
         flex-direction: row;
+        /* Poster ve bilgi yan yana gelir */
         gap: 24px;
     }
 
     .modal-details__poster {
         flex: 0 0 294px;
+        /* Poster genişliği sabitlenir */
         height: 400px;
     }
 
     .modal-details__image {
         height: 100%;
+        /* Yüksekliği poster kutusuna göre ayarlanır */
     }
 
     .modal-details__info {
         flex: 1;
+        /* Kalan alanı kaplar */
     }
 
     .modal-details__title {
@@ -220,7 +267,7 @@
     }
 }
 
-/* Desktop Styles */
+/* Masaüstü görünüm düzenlemeleri (>=1280px) */
 @media only screen and (min-width: 1280px) {
     .modal-details__container {
         padding: 60px;
@@ -228,6 +275,7 @@
 
     .modal-details__poster {
         flex: 0 0 375px;
+        /* Daha büyük poster */
         height: 478px;
     }
 
@@ -241,8 +289,12 @@
 
     .modal-details__library-btn {
         font-size: 16px;
-    } 
-        .modal-details__close:hover {
-            color: #f87719;
-            /* Bu renk SVG ikonun fill rengi olur */   }
+    }
+
+    /* Kapatma butonu üzerine gelindiğinde renk turuncuya döner */
+    .modal-details__close:hover {
+        color: #f87719;
+
+        /* Bu renk aynı zamanda SVG ikonun fill rengi olarak kullanılabilir */
+    }
 }
