@@ -1,6 +1,6 @@
-/* Catalog Section CSS */
+/* Catalog CSS */
 
-@import url("./modal-details.css");
+@import url('./modal-details.css');
 
 .catalog-film-section {
   padding-top: 16px;
@@ -156,10 +156,10 @@
 
 .search-button {
   border-radius: 100%;
-width: 48px;
+  width: 48px;
   height: 48px;
   padding: 10px 15px;
-  background:linear-gradient(145deg, #ffc226 0%, #f84119 100%);
+  background: linear-gradient(145deg, #ffc226 0%, #f84119 100%);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -182,24 +182,21 @@ width: 48px;
 }
 
 @media screen and (min-width: 768px) {
-
   .search-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    position: relative;
   }
-    
 }
 
 @media screen and (min-width: 1280px) {
   .search-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-}
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
 }
