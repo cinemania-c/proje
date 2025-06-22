@@ -8,6 +8,7 @@ import './js/scroll-to-top';
 import './js/modal';
 import './js/pagination';
 
+// Import additional modules
 import './js/weekly';
 import './js/library';
 import './js/upcoming';
