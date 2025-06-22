@@ -108,14 +108,16 @@
   color: var(--white-color);
 }
 
-/* Türler (Genre Dropdown Styling) */
+/* Türler kısmı  */
 #genre-dropdown-container {
   text-align: center;
+
   margin: 20px 0;
 }
 
 #genre-dropdown {
   padding: 10px;
+  margin: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -123,7 +125,6 @@
   color: var(--black-color);
   font-family: var(--font-family);
   cursor: pointer;
-  margin: 10px;
 }
 
 #genre-dropdown option {
@@ -131,7 +132,7 @@
   padding: 8px;
 }
 
-/* Responsive Adjustments */
+/* Responsive Style All */
 @media screen and (min-width: 768px) {
   #library-list {
     gap: 49px;
@@ -165,6 +166,8 @@
   }
 }
 
+/*Destop Part*/
+
 @media screen and (min-width: 1280px) {
   #library-list {
     max-width: 1280px;
@@ -191,7 +194,8 @@
     width: 300px;
   }
 }
-/* Load More Button Styling */
+
+/* Load More Buttonı Style */
 #load-more-container {
   margin: 20px 0;
   text-align: center;
@@ -201,10 +205,11 @@
   background-color: var(--accent-color);
   color: var(--white-color);
   border: none;
+  border-radius: 5px;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: var(--font-weight-medium);
-  border-radius: 5px;
+
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
