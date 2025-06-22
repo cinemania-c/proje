@@ -168,6 +168,19 @@
   background: linear-gradient(145deg, #f84119 0%, #ffc226 100%);
 }
 
+.clear-button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #999;
+  margin-left: -40px; /* X butonu input'un sağında gözüksün */
+}
+
+.clear-button:hover {
+  color: #333;
+}
+
 @media screen and (min-width: 768px) {
   .search-container {
     display: flex;
