@@ -348,3 +348,13 @@
     font-size: 14px;
   }
 }
+
+/* Theme Switcher Styles */
+.switch-icon-sun {
+  margin-left: 10px;
+  margin-bottom: 1px;
+}
+.switch-icon {
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
