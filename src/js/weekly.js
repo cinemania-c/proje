@@ -2,6 +2,12 @@
 
 const weeklyList = document.querySelector('#weekly-movie-card');
 // API AYARLARI
+const BASE_URL = 'https://api.themoviedb.org/3';
+const IMG_BASE_URL = 'https://image.tmdb.org/t/p';
+const API_KEY = '9d898ad8ed36e30a2f478f382f12d8e2';
+const ENDPOINTS = {
+  TRENDING_WEEK: '/trending/movie/week',
+};
 
 const genreMap = {
   28: 'Action',
