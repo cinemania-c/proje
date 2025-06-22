@@ -294,6 +294,6 @@
     /* Kapatma butonu üzerine gelindiğinde renk turuncuya döner */
     .modal-details__close:hover {
         color: #f87719;
-        /* Bu renk aynı zamanda SVG ikonun fill rengi olarak kullanılabilir */
+        /*svg style="fill: currentColor; özelliğiverildiğinden Bu renk aynı zamanda SVG ikonun fill rengi olarak kullanılabilir */
     }
 }
