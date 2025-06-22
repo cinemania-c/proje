@@ -190,3 +190,13 @@
     position: relative;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+}
