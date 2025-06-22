@@ -128,10 +128,6 @@
 /* Açık tema: kapatma butonu rengi siyah yapılır */
 .light-theme .modal-trailer__close {
     color: #111111;
-    /* Her iki temada da kapatma butonu kontrastlı kalır */
-}
-
-/* Açık tema: hover durumunda turuncuya dönüş */
-.light-theme .modal-trailer__close:hover {
-    color: var(--orange);
+    /* Her iki temada
+    -da kapatma butonu kontrastlı kalır */
 }
