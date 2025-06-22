@@ -1,3 +1,5 @@
+/*Libary List Style düzenlendi*/
+
 #default-content {
   text-align: center;
   margin-top: 50px;
@@ -7,9 +9,9 @@
   font-size: 32px;
   font-weight: var(--font-weight-bold);
   color: var(--secondary-black);
-  margin-bottom: 20px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   font-family: var(--font-family);
+  margin-bottom: 20px;
 }
 .dark-theme #default-content h2 {
   color: var(--white-color);
@@ -21,6 +23,7 @@
   margin: 10px 0;
   font-family: var(--second-family);
 }
+
 .dark-theme #default-content p {
   color: var(--light-grey-color);
 }
@@ -32,10 +35,10 @@
   padding: 12px 24px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
   margin-top: 15px;
   font-weight: var(--font-weight-medium);
   font-family: var(--font-family);
+  border-radius: 35px;
 }
 
 #default-content button:hover {
@@ -45,7 +48,7 @@
 #library-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 20px;
   justify-content: center;
   margin-top: 20px;
 }
